@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>KidsLink</title>
+</head>
+
+<body style ="margin-top: 10px; margin-left: 40px; font-family: Arial, Helvetica, sans-serif;color: #333;font-size: 13px;max-width: 600px;">
+  <p><%= image_tag( 'http://www.mykidslink.com/images/m_logo.png', :width=>"102",:height=>"75", :alt=>"KidsLink Logo")%></p>  
+  <h1 style="font-size: 18px; font-weight: bold; color:#333333;">Application Submitted for OrganizationLongName</h1>
+  <%= yield %>
+  <p>For any questions about KidsLink, please reply to this email or visit our web site at
+    <strong>
+      <a style="color: #13a3de;"><%= link_to "http://www.mykidslink.com/","www.mykidslink.com" %></a>
+    </strong>
+    and choose the About Us page. For any questions about OrganizationLongName,
+    please visit their web site at 
+    <strong><a style="color: #13a3de;"><%= link_to "http://orgwebsite.org/", "orgwebsite.org"%></a></strong></p>
+
+</body>
+</html>
