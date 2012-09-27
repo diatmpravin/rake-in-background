@@ -1,4 +1,6 @@
 Rails3Devise::Application.routes.draw do
+  resources :addresses
+
   resources :orders
 
   get "home/index"
