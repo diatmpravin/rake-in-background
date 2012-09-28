@@ -5,8 +5,9 @@ class Notifier < ActionMailer::Base
   default from: "kidslink.test@gmail.com"
   
   def order_created
+  	#sleep 100
     mail(:to => 'mpravin@maisasolutions.com', :subject => "Order") do |format|
-    	format.html {render :layout => 'notifier'}    	
+    	 format.html {render :layout => 'notifier'}    	
     end
   end
   

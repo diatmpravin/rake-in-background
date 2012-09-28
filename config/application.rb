@@ -55,5 +55,12 @@ module Rails3Devise
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    private
+    
+    def call_rake(task)
+      raise "Maisa"
+    end
+    
   end
 end

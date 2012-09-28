@@ -4,7 +4,17 @@ class EmailNotificationObserver < ActiveRecord::Observer
   
   def after_create(model)    
   	if model.class.name == "Order"
-    	Notifier.order_created.deliver
+  	  for i in 0..5
+  	    #sleep 100
+  	  	#puts "#############################"
+  	  	#Notifier.order_created.deliver
+  	  	
+  	  	#EXECUTE RAKE
+  	  	system "rake send_mail --trace &"
+  	  	
+  	  	#MAKE RAKE TASK UNIVERSAL
+  	  	#call_rake :send_mail
+  	  end    	
     else
     	Notifier.address_created.deliver	
     end    
